@@ -1,3 +1,4 @@
-cmd/cli/*_bpf*.o
-cmd/cli/*_bpf*.go
-cli
+minimal*
+!minimal.bpf.c
+tutorial-minimal-example
+

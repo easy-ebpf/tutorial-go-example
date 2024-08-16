@@ -3,9 +3,6 @@ FROM golang:alpine
 
 RUN mkdir -p /workspace/cli
 
-# Create a user group and account under id 1000.
-RUN addgroup -g 1000 -S user && adduser -u 1000 -D user -G user
-
 # Install quality-of-life packages.
 RUN apk --update add --no-cache curl git vim fish tmux neovim wget make
 

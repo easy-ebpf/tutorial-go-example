@@ -1,8 +1,8 @@
 {
   "name": "Minimal eBPF example LAB",
   "service": "cli",
-  "runArgs": ["--privileged", "--cap-add SYS_ADMIN", "--log-level debug"],
-  "remoteUser": "user",
+  "runArgs": ["--privileged", "--init", "--security-opt", "seccomp=unconfined"],
+  "remoteUser": "root",
   "shutdownAction": "stopCompose",
   "workspaceFolder": "/workspaces/cli",
   "dockerComposeFile": "compose.yaml",

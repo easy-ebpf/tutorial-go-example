@@ -3,4 +3,4 @@ services:
     build: .
     volumes:
       - ..:/workspaces/cli
-      - ./fish:/home/user/.config/fish
+      - ./fish:/root/.config/fish
