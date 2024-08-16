@@ -1,3 +1,3 @@
 cmd/cli/*_bpf*.o
-# cmd/cli/*_bpf*.go
+cmd/cli/*_bpf*.go
 cli
