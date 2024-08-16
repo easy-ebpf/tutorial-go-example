@@ -1,0 +1,6 @@
+services:
+  cli:
+    build: .
+    volumes:
+      - ..:/workspaces/cli
+      - ./fish:/home/user/.config/fish

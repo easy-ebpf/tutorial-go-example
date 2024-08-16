@@ -1,0 +1,20 @@
+{
+  "name": "Minimal eBPF example LAB",
+  "service": "cli",
+  "runArgs": ["--privileged"],
+  "remoteUser": "user",
+  "shutdownAction": "stopCompose",
+  "workspaceFolder": "/workspaces/cli",
+  "dockerComposeFile": "compose.yaml",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "bmewburn.vscode-intelephense-client",
+        "EditorConfig.EditorConfig"
+      ]
+    }
+  },
+
+  "postCreateCommand": "make setup && fish"
+}
