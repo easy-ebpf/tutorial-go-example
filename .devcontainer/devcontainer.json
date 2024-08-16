@@ -1,7 +1,7 @@
 {
   "name": "Minimal eBPF example LAB",
   "service": "cli",
-  "runArgs": ["--privileged"],
+  "runArgs": ["--privileged", "--cap-add SYS_ADMIN", "--log-level debug"],
   "remoteUser": "user",
   "shutdownAction": "stopCompose",
   "workspaceFolder": "/workspaces/cli",
@@ -16,5 +16,5 @@
     }
   },
 
-  "postCreateCommand": "make setup && fish"
+  "postCreateCommand": "fish"
 }

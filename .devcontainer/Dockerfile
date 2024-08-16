@@ -1,5 +1,5 @@
 # From official php image.
-FROM alpine:latest
+FROM golang:alpine
 
 RUN mkdir -p /workspace/cli
 
@@ -11,7 +11,7 @@ RUN apk --update add --no-cache curl git vim fish tmux neovim wget make
 
 RUN \
     # Install persistent / runtime deps
-    apk --update add --no-cache clang lld musl-dev compiler-rt bcc gcompat fuse
+    apk --update add --no-cache clang llvm bcc bcc-tools gcompat libbpf-dev linux-headers
 
 # Make fish the default shell
 RUN sed -i 's|/bin/ash$|/usr/bin/fish|' /etc/passwd
