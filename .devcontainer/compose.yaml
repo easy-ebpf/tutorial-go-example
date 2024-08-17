@@ -1,6 +1,6 @@
 services:
   cli:
-    build: .
+    image: "ghcr.io/easy-ebpf/minimal-ebpf-example:latest"
     privileged: true
     volumes:
       - ..:/workspaces/cli

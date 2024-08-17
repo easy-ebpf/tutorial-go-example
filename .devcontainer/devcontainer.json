@@ -1,7 +1,6 @@
 {
   "name": "Minimal eBPF example LAB",
   "service": "cli",
-  "runArgs": ["--privileged", "--init", "--security-opt", "seccomp=unconfined"],
   "remoteUser": "root",
   "shutdownAction": "stopCompose",
   "workspaceFolder": "/workspaces/cli",
