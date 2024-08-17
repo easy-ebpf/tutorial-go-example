@@ -14,3 +14,6 @@ RUN \
 
 # Make fish the default shell
 RUN sed -i 's|/bin/sh$|/usr/bin/fish|' /etc/passwd
+
+# Prevent container from exiting early.
+CMD ["sleep", "infinity"]
