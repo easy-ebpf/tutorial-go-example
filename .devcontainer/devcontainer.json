@@ -9,11 +9,17 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "bmewburn.vscode-intelephense-client",
-        "EditorConfig.EditorConfig"
-      ]
+        "stateful.runme",
+        "golang.Go",
+      ],
+      "settings": {
+        "go.useLanguageServer": true,
+        "editor.fontSize": 18,
+        "editor.minimap.enabled": false,
+        "workbench.editorAssociations": {
+            "*.md": "markdown.preview.editor"
+        }
+      }
     }
-  },
-
-  "postCreateCommand": "fish"
+  }
 }
