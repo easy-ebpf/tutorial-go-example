@@ -13,7 +13,4 @@ RUN \
     apk --update add --no-cache clang llvm bcc bcc-tools gcompat libbpf-dev linux-headers bpftool
 
 # Make fish the default shell
-RUN sed -i 's|/bin/ash$|/usr/bin/fish|' /etc/passwd
-
-# Prevent container from exiting early.
-CMD ["sleep", "infinity"]
+RUN sed -i 's|/bin/sh$|/usr/bin/fish|' /etc/passwd
