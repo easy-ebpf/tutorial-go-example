@@ -8,7 +8,7 @@ RUN apk --update add --no-cache curl git vim fish tmux neovim wget make
 
 RUN \
     # Install persistent / runtime deps
-    apk --update add --no-cache clang llvm bcc bcc-tools gcompat libbpf-dev linux-headers
+    apk --update add --no-cache clang llvm bcc bcc-tools gcompat libbpf-dev linux-headers bpftool
 
 # Make fish the default shell
 RUN sed -i 's|/bin/ash$|/usr/bin/fish|' /etc/passwd

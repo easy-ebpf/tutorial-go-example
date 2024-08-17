@@ -1,6 +1,9 @@
 services:
   cli:
     build: .
+    privileged: true
     volumes:
       - ..:/workspaces/cli
       - ./fish:/root/.config/fish
+      - /sys/kernel/debug:/sys/kernel/debug:ro
+      - /sys/kernel/tracing:/sys/kernel/tracing:ro
