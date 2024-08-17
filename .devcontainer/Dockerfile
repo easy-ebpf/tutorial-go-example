@@ -1,6 +1,8 @@
 # From official php image.
 FROM golang:alpine
 
+LABEL org.opencontainers.image.source="https://github.com/easy-ebpf/tutorial-minimal-example"
+
 RUN mkdir -p /workspace/cli
 
 # Install quality-of-life packages.
