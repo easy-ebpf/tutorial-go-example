@@ -27,11 +27,7 @@ func main() {
 	}
 	defer kp.Close()
 
-	// Read loop reporting the total amount of times the kernel
-	// function was entered, once per second.
-	ticker := time.NewTicker(1 * time.Second)
-	defer ticker.Stop()
-
+	// Waiting for events...
 	log.Println("Waiting for events..")
 	time.Sleep(math.MaxInt64)
 
