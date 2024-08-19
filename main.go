@@ -14,14 +14,13 @@ func main() {
 
 	// Load the compiled eBPF ELF and load it into the kernel.
 	var objs minimalObjects
-
 	if err := loadMinimalObjects(&objs, nil); err != nil {
 		log.Fatal("Loading eBPF objects:", err)
 	}
 	defer objs.Close()
 
 	// Attach to the same tracepoint mentioned in minimal.bpf.c
-	kp, err := link.Tracepoint("syscalls", "sys_enter_write", objs.minimalPrograms.HandleTp, nil)
+	kp, err := link.Tracepoint("syscalls", "sys_enter_open", objs.minimalPrograms.HandleTp, nil)
 	if err != nil {
 		log.Fatalf("opening tracepoint: %s", err)
 	}
